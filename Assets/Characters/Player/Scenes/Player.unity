@@ -777,6 +777,11 @@ PrefabInstance:
       propertyPath: m_UpdateWhenOffscreen
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1249726504828402700, guid: 33b7d9c8b253d3442a1aa581d73b2fb9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a6fb168ab0b5510478079ade95d3bd23, type: 2}
     - target: {fileID: -1200856079203341021, guid: 33b7d9c8b253d3442a1aa581d73b2fb9,
         type: 3}
       propertyPath: m_Layer
@@ -1086,14 +1091,13 @@ MonoBehaviour:
   characterController: {fileID: 1416904268}
   extendedCharacterController: {fileID: 1416904267}
   animator: {fileID: 1416904270}
-  move: {x: 0, y: 1}
+  move: {x: 0, y: 0}
   look: {x: 0, y: 0}
   sprint: 0
   jump: 0
   isGrounded: 0
   Velocity: {x: 0, y: 0, z: 0}
   CurrentSpeed: 0
-  groundCheckColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!95 &1416904270 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 33b7d9c8b253d3442a1aa581d73b2fb9,
