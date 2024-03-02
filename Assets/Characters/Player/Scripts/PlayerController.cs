@@ -73,9 +73,8 @@ namespace Player
                 m_Velocity.y += gravity * Time.deltaTime;
                 m_ExtendedCharacterController.Move(m_Velocity * Time.deltaTime);
 
-                //animator.SetFloat("MoveSpeed", 0.0f);
-
-                //pos.y -= 0.5f;
+                //m_IsGrounded = true;
+                //GroundMovement();
             }
 
             animator.SetBool("IsGrounded", m_IsGrounded);

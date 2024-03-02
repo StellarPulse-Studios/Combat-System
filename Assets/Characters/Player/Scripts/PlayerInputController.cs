@@ -9,25 +9,30 @@ namespace Player
         public Vector2 look;
         public bool sprint;
         public bool jump;
+        public Blackboard blackboard;
 
         private void OnMove(InputValue value)
         {
             move = value.Get<Vector2>();
+            blackboard.move = move;
         }
 
         private void OnLook(InputValue value)
         {
             look = value.Get<Vector2>();
+            blackboard.look = look;
         }
 
         private void OnSprint(InputValue value)
         {
             sprint = value.isPressed;
+            blackboard.sprint = sprint;
         }
 
         private void OnJump(InputValue value)
         {
             jump = value.isPressed;
+            blackboard.jump = jump;
         }
 
         private void OnExit(InputValue value)

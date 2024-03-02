@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 namespace Player
 {
@@ -20,15 +19,6 @@ namespace Player
         private void Start()
         {
             m_Transform = transform;
-        }
-
-        private void OnUpdate()
-        {
-            //if (Input.GetKeyDown(KeyCode.Space))
-            //{
-            //    float y = -Mathf.Sign(gravity) * Mathf.Sqrt(2.0f * Mathf.Abs(gravity) * jumpHeight);
-            //    Velocity = new Vector3(0.0f, y, 0.0f);
-            //}
         }
 
         private Vector3 m_RayHitPoint;
