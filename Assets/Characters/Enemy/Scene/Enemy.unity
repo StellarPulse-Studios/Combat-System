@@ -226,6 +226,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LP
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e738bafc7dfe7f4bb5110e468d30bc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6364014552064835499, guid: 0e738bafc7dfe7f4bb5110e468d30bc4,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -252,6 +257,10 @@ PrefabInstance:
     - target: {fileID: 1186413494234004, guid: 03228ebb154d829419e0ed3940352524, type: 3}
       propertyPath: m_Name
       value: ork berserk prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186413494234004, guid: 03228ebb154d829419e0ed3940352524, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4910303872038388, guid: 03228ebb154d829419e0ed3940352524, type: 3}
       propertyPath: m_LocalPosition.x
@@ -310,6 +319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Azrak
       objectReference: {fileID: 0}
+    - target: {fileID: 1843235065539226, guid: 58462b17077d77843a1e9fe0197834e4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4296532453414690, guid: 58462b17077d77843a1e9fe0197834e4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -18.672
@@ -366,17 +379,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.65
+      value: -16.97
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 152.98853
+      value: 153.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -85.57
+      value: -100.48
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
@@ -418,11 +431,101 @@ PrefabInstance:
       propertyPath: m_Name
       value: orc
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0bf2a252bfb213d4b86ddd042843d872, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622929028}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622929027}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 622929026}
   m_SourcePrefab: {fileID: 100100000, guid: 37a2656827376df47ae7ca3801e8262e, type: 3}
+--- !u!1 &622929025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+    type: 3}
+  m_PrefabInstance: {fileID: 622929024}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &622929026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622929025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBlackboard: {fileID: 0}
+  _serializedBlackboard: '{"_variables":{}}'
+  _objectReferences: []
+  _serializedVariables: []
+--- !u!114 &622929027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622929025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aad115aca74ce3c4891b3f6de0b4aae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedExposedParameters: []
+  _boundGraphSerialization: 
+  _boundGraphObjectReferences: []
+  _boundGraphSource:
+    _version: 0
+    _category: 
+    _comments: 
+    _translation: {x: 0, y: 0}
+    _zoomFactor: 1
+  _firstActivation: 0
+  _enableAction: 0
+  _disableAction: 0
+  _lockBoundGraphPrefabOverrides: 1
+  _preInitializeSubGraphs: 0
+  _updateMode: 0
+  _graph: {fileID: 11400000, guid: be8e7ad0dae94164bb791201d984aeaa, type: 2}
+  _blackboard: {fileID: 622929026}
+--- !u!195 &622929028
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622929025}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &709544656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +537,10 @@ PrefabInstance:
     - target: {fileID: 1864503323932838, guid: 21f5716ea38f3f94cb22955ed524d1e0, type: 3}
       propertyPath: m_Name
       value: Orc_Ursag
+      objectReference: {fileID: 0}
+    - target: {fileID: 1864503323932838, guid: 21f5716ea38f3f94cb22955ed524d1e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4895588176664270, guid: 21f5716ea38f3f94cb22955ed524d1e0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -541,7 +648,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d0eb2f974891b3d4d87af4f7aa738c00, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -581,7 +688,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -18.237247, y: 152.98853, z: -88.85412}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -808,6 +915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrkAssasin
       objectReference: {fileID: 0}
+    - target: {fileID: 1637584495559616, guid: ba2926d80e1466444936c24a1fa5aec7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4558266444110246, guid: ba2926d80e1466444936c24a1fa5aec7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.510809
@@ -865,6 +976,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orc_Dardan
       objectReference: {fileID: 0}
+    - target: {fileID: 1924896561104452, guid: a8fd8a5d0f4b0d048804c2b223221a9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4781692444153120, guid: a8fd8a5d0f4b0d048804c2b223221a9c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.75
@@ -910,6 +1025,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8fd8a5d0f4b0d048804c2b223221a9c, type: 3}
+--- !u!1 &1770677415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1770677417}
+  - component: {fileID: 1770677416}
+  m_Layer: 0
+  m_Name: NavMesh Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1770677416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770677415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: d179c266e52f37749beca66486f3d177, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!4 &1770677417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770677415}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.289066, y: 152.20149, z: -88.67321}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1923071457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -921,6 +1099,10 @@ PrefabInstance:
     - target: {fileID: 1823283430407352, guid: 391d0d0fa64f40a458aaeb5e875ef33e, type: 3}
       propertyPath: m_Name
       value: Orc_Gnur
+      objectReference: {fileID: 0}
+    - target: {fileID: 1823283430407352, guid: 391d0d0fa64f40a458aaeb5e875ef33e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4384606705921606, guid: 391d0d0fa64f40a458aaeb5e875ef33e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -978,6 +1160,10 @@ PrefabInstance:
     - target: {fileID: 1918386275828626, guid: ae09b26840fd39e46b1b15ce0ac5927d, type: 3}
       propertyPath: m_Name
       value: Orc_Kanit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918386275828626, guid: ae09b26840fd39e46b1b15ce0ac5927d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4463373426573454, guid: ae09b26840fd39e46b1b15ce0ac5927d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1040,3 +1226,4 @@ SceneRoots:
   - {fileID: 709544656}
   - {fileID: 2071930165}
   - {fileID: 609674775}
+  - {fileID: 1770677417}
