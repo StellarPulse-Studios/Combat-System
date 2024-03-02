@@ -487,7 +487,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aad115aca74ce3c4891b3f6de0b4aae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _serializedExposedParameters: []
+  _serializedExposedParameters:
+  - _json: '{"_targetVariableID":"8bde6477-49b5-441c-9a10-98c11276cd54","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"e687dc9a-db49-4210-b167-98ab12e8569f","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"585dab3a-6708-4743-a6b4-531a92bc37f5","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"ddd2e1af-becc-455a-88ec-784063d4779d","$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"b5a6119d-810c-4e1c-b5b8-2ba0374cfce2","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"605dfb4a-f37a-4b07-a48d-73971bfba8a3","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"3444d417-2a76-4889-8006-29a51bcda6ca","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"ec5f7fd4-eb7f-4588-8cc7-ead9d2ce28a6","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"35db829e-f61b-4a26-b17d-cbe1492ad19c","$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.AI.NavMeshAgent,
+      UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"43029fcc-21c1-4616-b12c-9cfa111e01d4","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"4586942e-834a-4998-aa99-ccd48ac3680d","$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.Animator,
+      UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"b066110e-1e3e-426f-ae81-baa538a4218c","_value":[],"$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"f506957a-b2fd-4074-9cfb-72a14f63dea7","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_targetVariableID":"91e00383-ff84-4482-9ec3-32639687d870","$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
   _boundGraphSerialization: 
   _boundGraphObjectReferences: []
   _boundGraphSource:

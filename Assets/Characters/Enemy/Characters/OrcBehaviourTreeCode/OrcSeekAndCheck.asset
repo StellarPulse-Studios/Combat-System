@@ -12,17 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a686a47eee2fa44cb0a34b5d86e4d5e, type: 3}
   m_Name: OrcSeekAndCheck
   m_EditorClassIdentifier: 
-  _serializedGraph: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":480.0,"y":262.4},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"0"},{"_action":{"_missingType":"NodeCanvas.Tasks.Actions.MoveToGameObjectCheck","_recoveryState":"{\r\n   
-    \"target\": {\r\n        \"_name\": \"Target\",\r\n        \"_targetVariableID\":
-    \"8bd1360c-c757-460b-bb42-5f82654d35fc\"\r\n    },\r\n    \"speed\": {\r\n       
-    \"_name\": \"Speed\",\r\n        \"_targetVariableID\": \"772f20db-5c30-477a-8bed-098cbac6d3d6\"\r\n   
-    },\r\n    \"keepDistance\": {\r\n        \"_name\": \"Keep Distance\",\r\n       
-    \"_targetVariableID\": \"e9fc44c8-82fb-47c6-954a-accfe3d33164\"\r\n    },\r\n   
-    \"rangeDistance\": {\r\n        \"_name\": \"Range Distance\",\r\n        \"_targetVariableID\":
-    \"5e7a7216-2e57-4127-813b-e96fee8affdd\"\r\n    },\r\n    \"overrideAgent\":
-    {\r\n        \"_type\": \"UnityEngine.AI.NavMeshAgent\",\r\n        \"_name\":
-    \"NavMeshAgent\",\r\n        \"_targetVariableID\": \"0662727c-c46f-4f58-99a8-f1f1785f020c\"\r\n   
-    },\r\n    \"$type\": \"NodeCanvas.Tasks.Actions.MoveToGameObjectCheck\"\r\n}","$type":"NodeCanvas.Framework.Internal.MissingAction"},"_position":{"x":602.8,"y":420.6},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"1"},{"_position":{"x":870.0,"y":356.6},"$type":"NodeCanvas.BehaviourTrees.ActionNode"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"NavMeshAgent":{"_name":"NavMeshAgent","_id":"0662727c-c46f-4f58-99a8-f1f1785f020c","_isPublic":true,"$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
+  _serializedGraph: '{"type":"NodeCanvas.BehaviourTrees.BehaviourTree","nodes":[{"_position":{"x":480.0,"y":262.4},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"0"},{"_action":{"target":{"_name":"Target","_targetVariableID":"8bd1360c-c757-460b-bb42-5f82654d35fc"},"speed":{"_name":"Speed","_targetVariableID":"772f20db-5c30-477a-8bed-098cbac6d3d6"},"keepDistance":{"_name":"Keep
+    Distance","_targetVariableID":"e9fc44c8-82fb-47c6-954a-accfe3d33164"},"rangeDistance":{"_name":"Range
+    Distance","_targetVariableID":"5e7a7216-2e57-4127-813b-e96fee8affdd"},"overrideAgent":{"_type":"UnityEngine.AI.NavMeshAgent","_name":"NavMeshAgent","_targetVariableID":"0662727c-c46f-4f58-99a8-f1f1785f020c"},"$type":"NodeCanvas.Tasks.Actions.MoveToGameObjectCheck"},"_position":{"x":602.8,"y":420.6},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"1"},{"_position":{"x":912.6624,"y":262.743},"$type":"NodeCanvas.BehaviourTrees.ActionNode"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{"NavMeshAgent":{"_name":"NavMeshAgent","_id":"0662727c-c46f-4f58-99a8-f1f1785f020c","_isPublic":true,"$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
     UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Target":{"_name":"Target","_id":"8bd1360c-c757-460b-bb42-5f82654d35fc","_isPublic":true,"$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Speed":{"_name":"Speed","_id":"772f20db-5c30-477a-8bed-098cbac6d3d6","_isPublic":true,"$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Keep
@@ -35,7 +27,7 @@ MonoBehaviour:
     _version: 3.28
     _category: 
     _comments: 
-    _translation: {x: -143, y: -65}
-    _zoomFactor: 1
+    _translation: {x: -128.45178, y: 24.941475}
+    _zoomFactor: 0.76024985
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}
