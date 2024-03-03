@@ -4,17 +4,19 @@ using UnityEngine;
 
 namespace Player
 {
-    [CreateAssetMenu(fileName = "New In Air Locomotion", menuName = "Player/State/Unarmed/In Air")]
-    public class UnarmedInAirSO : StateSO
+    [CreateAssetMenu(fileName = "New Free Fall", menuName = "Player/State/Unarmed/Free Fall")]
+    public class UnarmedFreeFallSO : StateSO
     {
         public override void OnEnter(Blackboard board)
         {
-            Debug.Log("Unarmed In Air Enter...");
+            board.animator.SetBool("IsGrounded", false);
+            board.animator.SetTrigger("FreeFall");
         }
 
         public override void OnExit(Blackboard board)
         {
-            Debug.Log("Unarmed In Air Exit...");
+            board.animator.SetBool("IsGrounded", true);
+            board.animator.SetFloat("MoveSpeed", 0.0f);
         }
 
         public override void OnUpdate(Blackboard board)

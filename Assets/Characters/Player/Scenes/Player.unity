@@ -1081,6 +1081,7 @@ MonoBehaviour:
   walkSpeed: 2.047
   runSpeed: 4.094
   sprintSpeed: 6.141
+  jumpHeight: 2
   groundCheckRadiusOffset: 0.01
   groundCheckYOffset: 0
   groundLayer:
@@ -1096,8 +1097,11 @@ MonoBehaviour:
   sprint: 0
   jump: 0
   isGrounded: 0
-  Velocity: {x: 0, y: 0, z: 0}
+  isAnimationCompleted: 0
   CurrentSpeed: 0
+  Velocity: {x: 0, y: 0, z: 0}
+  PreviousVelocity: {x: 0, y: 0, z: 0}
+  PreviousSpeed: 0
 --- !u!95 &1416904270 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 33b7d9c8b253d3442a1aa581d73b2fb9,

@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e57671b5fdb598941b4d0f7ea6b7c325, type: 3}
-  m_Name: In Air
+  m_Script: {fileID: 11500000, guid: 358db3311804c494588cf6235422aff4, type: 3}
+  m_Name: Land
   m_EditorClassIdentifier: 
   transitions:
-  - condition: {fileID: 11400000, guid: d72d21fb9b3de4f47a4da841ff0aa0c3, type: 2}
+  - condition: {fileID: 11400000, guid: 38225ad862445f846b8506d1a1056ce6, type: 2}
     to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
-  actions:
-  - {fileID: 11400000, guid: 9a9e62fb382b092448924ac24ec2e913, type: 2}
+  actions: []

@@ -11,6 +11,7 @@ namespace Player
         public float walkSpeed = 2.0f;
         public float runSpeed = 4.0f;
         public float sprintSpeed = 6.0f;
+        public float jumpHeight = 2.0f;
 
         [Header("Ground Check")]
         public float groundCheckRadiusOffset = 0.01f;
@@ -32,9 +33,12 @@ namespace Player
 
         [Header("State Variables")]
         public bool isGrounded;
+        public bool isAnimationCompleted;
 
         [Header("Debug Variables")]
-        public Vector3 Velocity;
         public float CurrentSpeed;
+        public Vector3 Velocity;
+        public Vector3 PreviousVelocity;
+        public float PreviousSpeed;
     }
 }

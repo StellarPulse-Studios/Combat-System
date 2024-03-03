@@ -7,14 +7,17 @@ namespace Player
     [CreateAssetMenu(fileName = "New Unarmed Locomotion", menuName = "Player/State/Unarmed/Locomotion")]
     public class UnarmedLocomotionSO : StateSO
     {
+        public bool defaultRunning = true;
+
         public override void OnEnter(Blackboard board)
         {
-
+            board.Velocity = board.PreviousVelocity;
         }
 
         public override void OnExit(Blackboard board)
         {
-
+            board.PreviousVelocity = board.Velocity;
+            board.PreviousSpeed = board.PreviousVelocity.magnitude;
         }
 
         public override void OnUpdate(Blackboard board)
@@ -59,7 +62,7 @@ namespace Player
             if (board.move == Vector2.zero)
                 return 0.0f;
 
-            float speed = board.runSpeed;
+            float speed = defaultRunning ? board.runSpeed : board.walkSpeed;
 
             if (board.sprint)
                 speed = board.sprintSpeed;

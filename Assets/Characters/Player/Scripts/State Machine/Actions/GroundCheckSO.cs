@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Player
 {
-    [CreateAssetMenu(fileName = "New Ground Check", menuName = "Player/Actions/Unarmed/Ground Check")]
+    [CreateAssetMenu(fileName = "New Ground Check", menuName = "Player/Action/Unarmed/Ground Check")]
     public class GroundCheckSO : ActionSO
     {
+        public float secondGroundCheckMaxYDiff = 1.0f;
         public Color firstPassColor;
         public Color secondPassColor;
 
@@ -39,7 +40,7 @@ namespace Player
                 if (Physics.SphereCast(ray, radius * 0.5f, out RaycastHit hit))
                 {
                     float yDiff = board.playerTransform.position.y - hit.point.y;
-                    if (yDiff <= 0.5f)
+                    if (yDiff <= secondGroundCheckMaxYDiff)
                         isGrounded = true;
 
                     if (isGrounded)
