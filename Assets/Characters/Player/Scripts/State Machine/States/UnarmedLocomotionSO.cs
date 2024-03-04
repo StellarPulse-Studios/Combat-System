@@ -11,7 +11,10 @@ namespace Player
 
         public override void OnEnter(Blackboard board)
         {
+            board.fallingTime = 0.0f;
             board.Velocity = board.PreviousVelocity;
+            board.animator.SetBool("IsGrounded", true);
+            board.animator.SetFloat("MoveSpeed", board.Velocity.magnitude);
         }
 
         public override void OnExit(Blackboard board)

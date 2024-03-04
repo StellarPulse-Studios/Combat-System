@@ -12,6 +12,7 @@ namespace Player
         public float runSpeed = 4.0f;
         public float sprintSpeed = 6.0f;
         public float jumpHeight = 2.0f;
+        public float totalFallTimeToBecomeUnstable = 1.0f;
 
         [Header("Ground Check")]
         public float groundCheckRadiusOffset = 0.01f;
@@ -36,6 +37,7 @@ namespace Player
         public bool isAnimationCompleted;
         public float turnAngle;
         public Quaternion targetRotation;
+        public float fallingTime;
 
         [Header("Debug Variables")]
         public float CurrentSpeed;

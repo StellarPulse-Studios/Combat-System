@@ -20,11 +20,19 @@ namespace Player
         public override void OnExit(Blackboard board)
         {
             board.jump = false;
-            board.animator.SetBool("IsGrounded", true);
+            //board.animator.SetBool("IsGrounded", true);
+
+            if (board.move == Vector2.zero && board.PreviousVelocity.magnitude > board.runSpeed)
+            {
+                board.PreviousVelocity = board.PreviousVelocity.normalized * board.runSpeed;
+            }
         }
 
         public override void OnUpdate(Blackboard board)
         {
+            if (board.Velocity.y < 0.0f)
+                board.fallingTime += Time.deltaTime;
+
             board.Velocity.y += board.gravity * Time.deltaTime;
             board.characterController.Move(board.Velocity * Time.deltaTime);
         }
