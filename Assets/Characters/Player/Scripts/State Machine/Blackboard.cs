@@ -34,6 +34,8 @@ namespace Player
         [Header("State Variables")]
         public bool isGrounded;
         public bool isAnimationCompleted;
+        public float turnAngle;
+        public Quaternion targetRotation;
 
         [Header("Debug Variables")]
         public float CurrentSpeed;
