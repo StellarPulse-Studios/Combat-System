@@ -1267,7 +1267,7 @@ MonoBehaviour:
   runSpeed: 4.094
   sprintSpeed: 6.141
   jumpHeight: 2
-  totalFallTimeToBecomeUnstable: 0.75
+  totalFallTimeToBecomeUnstable: 0.6
   groundCheckRadiusOffset: 0.01
   groundCheckYOffset: 0
   groundLayer:
