@@ -512,9 +512,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{}}'
+  _serializedBlackboard: '{"_variables":{"IsStanding":{"_name":"IsStanding","_id":"92d12d14-b1e8-4546-8974-ba06c0f5ebc4","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
-  _serializedVariables: []
+  _serializedVariables:
+  - _json: '{"_name":"IsStanding","_id":"92d12d14-b1e8-4546-8974-ba06c0f5ebc4","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
 --- !u!114 &622929027
 MonoBehaviour:
   m_ObjectHideFlags: 0
