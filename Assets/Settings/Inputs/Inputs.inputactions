@@ -154,7 +154,7 @@
                 {
                     "name": "",
                     "id": "3e0079ef-21a4-4663-a41c-fee274025556",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/leftStickPress",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
