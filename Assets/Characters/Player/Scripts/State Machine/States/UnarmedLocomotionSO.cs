@@ -33,11 +33,11 @@ namespace Player
             Vector2 moveInput = board.move;
             float moveInputMagnitude = moveInput.magnitude;
             Vector3 moveDir = new Vector3(moveInput.x, 0.0f, moveInput.y).normalized;
-            moveInputMagnitude = (moveInputMagnitude <= 0.5f) ? 0.5f : 1.0f;
+            moveInputMagnitude = Mathf.Clamp01(moveInputMagnitude);
 
             Vector3 currentVelocity = board.Velocity;
             float currentSpeed = currentVelocity.magnitude;
-            float targetSpeed = GetTargetSpeed(board);
+            float targetSpeed = GetTargetSpeed(board, moveInputMagnitude);
 
             board.CurrentSpeed = currentSpeed;
 
@@ -47,25 +47,23 @@ namespace Player
 
             moveDir = Quaternion.Euler(0.0f, board.playerTransform.eulerAngles.y, 0.0f) * Vector3.forward;
 
-            if (Mathf.Approximately(moveInputMagnitude, 0.0f) && currentSpeed > 0.0f)
-                moveInputMagnitude = 1.0f;
-
-            float moveSpeed = moveInputMagnitude * currentSpeed;
-            board.Velocity = moveSpeed * moveDir;
+            board.Velocity = currentSpeed * moveDir;
 
             Vector3 stepDownMotion = board.extendedCharacterController.GetStepDownMotion(board.Velocity * Time.deltaTime);
 
             board.characterController.Move(stepDownMotion);
 
-            board.animator.SetFloat("MoveSpeed", moveSpeed);
+            board.animator.SetFloat("MoveSpeed", currentSpeed);
         }
 
-        private float GetTargetSpeed(Blackboard board)
+        private float GetTargetSpeed(Blackboard board, float inputMagnitude)
         {
             if (board.move == Vector2.zero)
                 return 0.0f;
 
             float speed = defaultRunning ? board.runSpeed : board.walkSpeed;
+
+            speed *= (inputMagnitude <= 0.708) ? 0.5f : 1.0f;
 
             if (board.sprint)
                 speed = board.sprintSpeed;
