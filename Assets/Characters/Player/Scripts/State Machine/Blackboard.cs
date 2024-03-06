@@ -13,6 +13,7 @@ namespace Player
         public float sprintSpeed = 6.0f;
         public float jumpHeight = 2.0f;
         public float totalFallTimeToBecomeUnstable = 1.0f;
+        public float crouchWalkSpeed = 2.047f;
 
         [Header("Ground Check")]
         public float groundCheckRadiusOffset = 0.01f;
@@ -38,6 +39,7 @@ namespace Player
         public float turnAngle;
         public Quaternion targetRotation;
         public float fallingTime;
+        public bool isCrouched;
 
         [Header("Debug Variables")]
         public float CurrentSpeed;

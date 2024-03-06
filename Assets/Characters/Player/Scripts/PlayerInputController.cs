@@ -9,6 +9,7 @@ namespace Player
         public Vector2 look;
         public bool sprint;
         public bool jump;
+        public bool crouch;
         public Blackboard blackboard;
 
         private void OnMove(InputValue value)
@@ -33,6 +34,12 @@ namespace Player
         {
             jump = value.isPressed;
             blackboard.jump = jump;
+        }
+
+        private void OnCrouch(InputValue value)
+        {
+            crouch = value.isPressed;
+            blackboard.isCrouched = !blackboard.isCrouched;
         }
 
         private void OnExit(InputValue value)
