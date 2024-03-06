@@ -32,8 +32,8 @@ namespace Player
         {
             Vector2 moveInput = board.move;
             float moveInputMagnitude = moveInput.magnitude;
-            Vector3 moveDir = (moveInputMagnitude > 1E-05f) ? new Vector3(moveInput.x, 0.0f, moveInput.y) / moveInputMagnitude : Vector3.zero;
-            moveInputMagnitude = Mathf.Clamp01(moveInputMagnitude);
+            Vector3 moveDir = new Vector3(moveInput.x, 0.0f, moveInput.y).normalized;
+            moveInputMagnitude = (moveInputMagnitude <= 0.5f) ? 0.5f : 1.0f;
 
             Vector3 currentVelocity = board.Velocity;
             float currentSpeed = currentVelocity.magnitude;
