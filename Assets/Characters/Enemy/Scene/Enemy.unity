@@ -458,6 +458,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: orc
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
       propertyPath: m_Controller
@@ -1427,7 +1432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1823283430407352, guid: 391d0d0fa64f40a458aaeb5e875ef33e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4384606705921606, guid: 391d0d0fa64f40a458aaeb5e875ef33e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1546,6 +1551,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Container
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286101095834604334, guid: e5b0cdb184877bc49869840546c47498,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
