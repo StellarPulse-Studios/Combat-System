@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a80ce30e901897f4c8ee0ddf3098d01d, type: 3}
-  m_Name: Can Sprint Roll
+  m_Script: {fileID: 11500000, guid: d6835aabed9fab04aa41c9361c10b272, type: 3}
+  m_Name: Dodge
   m_EditorClassIdentifier: 
+  transitions:
+  - condition: {fileID: 11400000, guid: 38225ad862445f846b8506d1a1056ce6, type: 2}
+    to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
+  actions: []

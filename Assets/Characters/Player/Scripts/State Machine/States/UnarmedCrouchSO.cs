@@ -19,6 +19,9 @@ namespace Player
 
             if (board.Velocity.magnitude > 1.0f)
                 board.PreviousVelocity = board.Velocity.normalized * board.crouchWalkSpeed;
+
+            board.jump = false;
+            board.isCrouched = false;
         }
 
         public override void OnUpdate(Blackboard board)

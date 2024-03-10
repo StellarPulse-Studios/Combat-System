@@ -10,6 +10,7 @@ namespace Player
         public bool sprint;
         public bool jump;
         public bool crouch;
+        public bool dodge;
         public Blackboard blackboard;
 
         private void OnMove(InputValue value)
@@ -38,8 +39,14 @@ namespace Player
 
         private void OnCrouch(InputValue value)
         {
-            crouch = value.isPressed;
             blackboard.isCrouched = !blackboard.isCrouched;
+            crouch = blackboard.isCrouched;
+        }
+
+        private void OnDodge(InputValue value)
+        {
+            dodge = value.isPressed;
+            blackboard.dodge = dodge;
         }
 
         private void OnExit(InputValue value)

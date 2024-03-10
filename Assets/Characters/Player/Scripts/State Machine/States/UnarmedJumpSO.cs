@@ -26,6 +26,8 @@ namespace Player
             {
                 board.PreviousVelocity = board.PreviousVelocity.normalized * board.runSpeed;
             }
+
+            board.isCrouched = false;
         }
 
         public override void OnUpdate(Blackboard board)

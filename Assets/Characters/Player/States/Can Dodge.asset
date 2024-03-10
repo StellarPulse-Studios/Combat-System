@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff4b1d619d01f34db53fa13e7f4cc0b, type: 3}
-  m_Name: Has Became Unstable
+  m_Script: {fileID: 11500000, guid: a80ce30e901897f4c8ee0ddf3098d01d, type: 3}
+  m_Name: Can Dodge
   m_EditorClassIdentifier: 

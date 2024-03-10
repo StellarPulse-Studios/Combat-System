@@ -32,6 +32,7 @@ namespace Player
         public Vector2 look;
         public bool sprint;
         public bool jump;
+        public bool dodge;
 
         [Header("State Variables")]
         public bool isGrounded;
