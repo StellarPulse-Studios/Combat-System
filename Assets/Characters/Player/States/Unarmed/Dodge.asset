@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Dodge
   m_EditorClassIdentifier: 
   transitions:
-  - condition: {fileID: 11400000, guid: 38225ad862445f846b8506d1a1056ce6, type: 2}
-    to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
   - condition: {fileID: 11400000, guid: 0709f2f77e15d2e4da82b609f88d3308, type: 2}
     to: {fileID: 11400000, guid: 2e3f6f67ad6101e4ca7d05a133bac85a, type: 2}
+  - condition: {fileID: 11400000, guid: 38225ad862445f846b8506d1a1056ce6, type: 2}
+    to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
   actions: []
   snapToGround: 0
   snapSpeed: 1

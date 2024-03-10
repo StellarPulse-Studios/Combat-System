@@ -11,6 +11,7 @@ namespace Player
         {
             board.Velocity = Vector3.zero;
             board.PreviousVelocity = Vector3.zero;
+            board.isAnimationCompleted = false;
 
             board.animator.SetBool("IsCrouched", false);
             board.animator.SetFloat("MoveSpeed", 0.0f);

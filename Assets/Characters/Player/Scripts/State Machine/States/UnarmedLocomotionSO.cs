@@ -13,6 +13,7 @@ namespace Player
         {
             board.fallingTime = 0.0f;
             board.Velocity = board.PreviousVelocity;
+            board.isAnimationCompleted = false;
             board.animator.SetBool("IsGrounded", true);
             board.animator.SetFloat("MoveSpeed", board.Velocity.magnitude);
         }
@@ -25,6 +26,10 @@ namespace Player
 
         public override void OnUpdate(Blackboard board)
         {
+            // It may happen that animation exit event call later, thus we are checking for completion status and resetting it.
+            if (board.isAnimationCompleted)
+                board.isAnimationCompleted = false;
+
             UpdateMovement(board);
         }
 

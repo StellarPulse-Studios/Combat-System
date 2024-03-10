@@ -12,6 +12,7 @@ namespace Player
             board.Velocity = Vector3.zero;
             board.PreviousVelocity = Vector3.zero;
             board.animator.applyRootMotion = true;
+            board.isAnimationCompleted = false;
             board.animator.SetTrigger("Skid");
             board.animator.SetFloat("MoveSpeed", 0.0f);
         }

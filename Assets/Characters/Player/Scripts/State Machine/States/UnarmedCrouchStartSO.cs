@@ -11,6 +11,7 @@ namespace Player
         {
             board.Velocity = Vector3.zero;
             board.PreviousVelocity = Vector3.zero;
+            board.isAnimationCompleted = false;
 
             board.animator.SetBool("IsCrouched", true);
         }

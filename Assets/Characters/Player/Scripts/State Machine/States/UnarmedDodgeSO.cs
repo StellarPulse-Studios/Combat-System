@@ -15,6 +15,8 @@ namespace Player
 
         public override void OnEnter(Blackboard board)
         {
+            board.isAnimationCompleted = false;
+
             if (snapToGround)
             {
                 m_IsSnappingCompleted = false;
@@ -30,7 +32,6 @@ namespace Player
 
         public override void OnExit(Blackboard board)
         {
-            board.animator.applyRootMotion = true;
             board.animator.applyRootMotion = false;
             board.isAnimationCompleted = false;
             board.isCrouched = false;

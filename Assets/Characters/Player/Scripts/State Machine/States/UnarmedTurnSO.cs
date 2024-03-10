@@ -10,6 +10,7 @@ namespace Player
         public override void OnEnter(Blackboard board)
         {
             board.animator.applyRootMotion = true;
+            board.isAnimationCompleted = false;
             board.animator.SetFloat("TurnAngle", board.turnAngle);
             board.animator.SetTrigger("Turn");
         }

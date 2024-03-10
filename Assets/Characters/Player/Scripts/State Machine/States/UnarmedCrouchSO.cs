@@ -9,6 +9,7 @@ namespace Player
     {
         public override void OnEnter(Blackboard board)
         {
+            board.isAnimationCompleted = false;
             board.animator.SetFloat("MoveSpeed", 0.0f);
             board.animator.SetBool("IsCrouched", true);
         }
