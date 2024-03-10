@@ -31,6 +31,8 @@ namespace Player
                 board.PreviousVelocity = Vector3.zero;
                 board.Velocity = Vector3.zero;
             }
+
+            board.jump = false;
         }
 
         public override void OnUpdate(Blackboard board)
