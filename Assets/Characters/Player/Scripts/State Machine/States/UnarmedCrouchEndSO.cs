@@ -20,6 +20,7 @@ namespace Player
         public override void OnExit(Blackboard board)
         {
             board.isAnimationCompleted = false;
+            board.dodge = false;
         }
 
         public override void OnUpdate(Blackboard board)

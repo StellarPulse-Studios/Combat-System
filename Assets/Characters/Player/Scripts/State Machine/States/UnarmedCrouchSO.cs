@@ -23,6 +23,7 @@ namespace Player
 
             board.jump = false;
             board.isCrouched = false;
+            board.dodge = false;
         }
 
         public override void OnUpdate(Blackboard board)
