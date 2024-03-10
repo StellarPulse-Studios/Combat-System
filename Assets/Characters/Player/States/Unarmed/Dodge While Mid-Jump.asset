@@ -15,5 +15,7 @@ MonoBehaviour:
   transitions:
   - condition: {fileID: 11400000, guid: 38225ad862445f846b8506d1a1056ce6, type: 2}
     to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 2c506d51c2e49e1458d4b4decfb8bc34, type: 2}
   snapToGround: 1
+  snapSpeed: 0.1
