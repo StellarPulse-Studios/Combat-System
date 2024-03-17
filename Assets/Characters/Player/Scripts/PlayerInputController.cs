@@ -54,6 +54,18 @@ namespace Player
             Application.Quit();
         }
 
+        private void OnLightAttack(InputValue value)
+        {
+            blackboard.attack = value.isPressed;
+            blackboard.lightAttack = value.isPressed;
+        }
+
+        private void OnHeavyAttack(InputValue value)
+        {
+            blackboard.attack = value.isPressed;
+            blackboard.heavyAttack = value.isPressed;
+        }
+
         public void RumbleGamepad(float low, float high)
         {
             Gamepad pad = Gamepad.current;
