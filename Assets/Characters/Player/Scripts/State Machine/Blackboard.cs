@@ -28,6 +28,7 @@ namespace Player
         public CharacterController characterController;
         public ExtendedCharacterController extendedCharacterController;
         public Animator animator;
+        public GameObject shield;
 
         [Header("Inputs")]
         public Vector2 move;
@@ -38,6 +39,7 @@ namespace Player
         public bool attack;
         public bool lightAttack;
         public bool heavyAttack;
+        public bool block;
 
         [Header("State Variables")]
         public bool isGrounded;

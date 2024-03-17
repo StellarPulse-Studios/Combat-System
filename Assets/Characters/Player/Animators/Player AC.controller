@@ -705,10 +705,10 @@ AnimatorStateMachine:
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -5722464133955759524}
-    m_Position: {x: 560, y: -20, z: 0}
+    m_Position: {x: 550, y: -40, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 2114567816913897565}
-    m_Position: {x: 40, y: 0, z: 0}
+    m_Position: {x: 400, y: -160, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -5136554149268700709}
     m_Position: {x: 770, y: -30, z: 0}
@@ -720,10 +720,10 @@ AnimatorStateMachine:
     m_Position: {x: 430, y: 230, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 7080337725555188314}
-    m_Position: {x: 140, y: -90, z: 0}
+    m_Position: {x: 110, y: -160, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: -6442157062480113017}
-    m_Position: {x: 410, y: -90, z: 0}
+    m_Position: {x: -50, y: -30, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 9057597674537665705}
     m_Position: {x: 970, y: -30, z: 0}
@@ -996,7 +996,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightAttack3
+  m_Name: Light Attack 4
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1061,7 +1061,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours:
   - {fileID: 833476238182754568}
-  m_AnyStatePosition: {x: 10, y: -50, z: 0}
+  m_AnyStatePosition: {x: -210, y: -20, z: 0}
   m_EntryPosition: {x: -210, y: 60, z: 0}
   m_ExitPosition: {x: 360, y: 50, z: 0}
   m_ParentStateMachinePosition: {x: 680, y: -70, z: 0}
@@ -1223,7 +1223,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightAttack5
+  m_Name: Light Attack 1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2019,9 +2019,6 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Block
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
     m_ConditionEvent: LightHit
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -2030,7 +2027,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.01
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.78571427
   m_HasExitTime: 0
@@ -2794,7 +2791,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HeavyAttack1
+  m_Name: Heavy Attack 1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3045,8 +3042,8 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours:
   - {fileID: 1851829049290728245}
-  m_AnyStatePosition: {x: 70, y: -70, z: 0}
-  m_EntryPosition: {x: 30, y: 30, z: 0}
+  m_AnyStatePosition: {x: 40, y: -10, z: 0}
+  m_EntryPosition: {x: 40, y: 80, z: 0}
   m_ExitPosition: {x: 550, y: 80, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1420265975115721195}
@@ -3277,7 +3274,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightAttack2
+  m_Name: Light Attack 3
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3305,7 +3302,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HeavyAttack2
+  m_Name: Heavy Attack 2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3350,7 +3347,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightAttack1
+  m_Name: Light Attack 2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3999,7 +3996,7 @@ AnimatorStateMachine:
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 260, y: 130, z: 0}
   m_ExitPosition: {x: 510, y: 0, z: 0}
-  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_ParentStateMachinePosition: {x: 750, y: 0, z: 0}
   m_DefaultState: {fileID: 6972524661531734776}
 --- !u!1102 &7083353657050039073
 AnimatorState:
@@ -4241,7 +4238,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightAttack4
+  m_Name: Light Attack 5
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

@@ -594,6 +594,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 844453266}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &908633340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5086512358991373851, guid: 4225ac8c69caa4a4dab2d7021176ee29,
+    type: 3}
+  m_PrefabInstance: {fileID: 844453266}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &951187662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -817,6 +823,7 @@ MonoBehaviour:
   characterController: {fileID: 1463453336}
   extendedCharacterController: {fileID: 1463453335}
   animator: {fileID: 1463453337}
+  shield: {fileID: 908633340}
   move: {x: 0, y: 0}
   look: {x: 0, y: 0}
   sprint: 0
@@ -825,6 +832,7 @@ MonoBehaviour:
   attack: 0
   lightAttack: 0
   heavyAttack: 0
+  block: 0
   isGrounded: 0
   isAnimationCompleted: 0
   isAnimationStateMachineExited: 0

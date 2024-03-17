@@ -11,6 +11,7 @@ namespace Player
         public bool jump;
         public bool crouch;
         public bool dodge;
+        public bool block;
         public Blackboard blackboard;
 
         private void OnMove(InputValue value)
@@ -64,6 +65,12 @@ namespace Player
         {
             blackboard.attack = value.isPressed;
             blackboard.heavyAttack = value.isPressed;
+        }
+
+        private void OnBlock(InputValue value)
+        {
+            block = value.isPressed;
+            blackboard.block = value.isPressed;
         }
 
         public void RumbleGamepad(float low, float high)
