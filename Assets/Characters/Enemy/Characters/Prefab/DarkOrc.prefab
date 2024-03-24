@@ -156,7 +156,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.003
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
@@ -416,7 +416,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
       propertyPath: m_Name
-      value: orc
+      value: DarkOrc
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
         type: 3}
@@ -657,6 +657,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8259238404860209298}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5788581084124909840}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 37a2656827376df47ae7ca3801e8262e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 23071008515838557}
   m_SourcePrefab: {fileID: 100100000, guid: 37a2656827376df47ae7ca3801e8262e, type: 3}
 --- !u!95 &2875229248835471067 stripped
 Animator:
@@ -811,3 +819,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 5673694415648042943}
+--- !u!136 &-5788581084124909840
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812737140248757787}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.40519267
+  m_Height: 1.8214018
+  m_Direction: 1
+  m_Center: {x: 0.0013322234, y: 1.0092436, z: 0}
+--- !u!54 &23071008515838557
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812737140248757787}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
