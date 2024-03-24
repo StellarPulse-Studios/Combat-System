@@ -25,6 +25,8 @@ MonoBehaviour:
     to: {fileID: 11400000, guid: dace83b400423b0429166ee28fcd04a1, type: 2}
   - condition: {fileID: 11400000, guid: fb5a6cf4fab03b44496b606cec98b479, type: 2}
     to: {fileID: 11400000, guid: b6ff7669de1ef2544820438f13c43621, type: 2}
+  - condition: {fileID: 11400000, guid: 0cd4cf504760c9e45826aac79cf6500e, type: 2}
+    to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
   actions:
   - {fileID: 11400000, guid: 9a9e62fb382b092448924ac24ec2e913, type: 2}
   defaultRunning: 1

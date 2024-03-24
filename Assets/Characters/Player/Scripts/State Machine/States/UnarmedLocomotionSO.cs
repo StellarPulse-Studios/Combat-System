@@ -14,6 +14,7 @@ namespace Player
             board.fallingTime = 0.0f;
             board.Velocity = board.PreviousVelocity;
             board.isAnimationCompleted = false;
+            board.animator.SetBool("IsArmed", false);
             board.animator.SetBool("IsGrounded", true);
             board.animator.SetFloat("MoveSpeed", board.Velocity.magnitude);
         }

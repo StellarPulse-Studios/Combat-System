@@ -28,6 +28,7 @@ namespace Player
         public CharacterController characterController;
         public ExtendedCharacterController extendedCharacterController;
         public Animator animator;
+        public GameObject sword;
         public GameObject shield;
 
         [Header("Inputs")]
