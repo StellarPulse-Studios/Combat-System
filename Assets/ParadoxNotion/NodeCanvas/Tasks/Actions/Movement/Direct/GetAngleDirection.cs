@@ -27,8 +27,8 @@ namespace NodeCanvas.Tasks.Actions
             int rotationDirection = Mathf.RoundToInt(Mathf.Sign(angleToRotate));
 
             direction.value = rotationDirection;
-            Debug.Log("Angle: " + angle);
-            Debug.Log("Direction: " + direction);
+            //Debug.Log("Angle: " + angle);
+            //Debug.Log("Direction: " + direction);
             EndAction();
         }
     }
