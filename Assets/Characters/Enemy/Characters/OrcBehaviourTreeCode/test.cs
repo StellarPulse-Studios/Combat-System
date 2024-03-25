@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NodeCanvas.BehaviourTrees;
+using Player;
 
-public class test : MonoBehaviour
+public class test : MonoBehaviour, IDamagable
 {
-    // Start is called before the first frame update
     public GameObject weapon;
+    public BehaviourTreeOwner m_BTOwner;
+
     void Equip()
     {
         weapon.SetActive(true);
@@ -15,4 +18,13 @@ public class test : MonoBehaviour
         weapon.SetActive(false);    
     }
 
+    public void EnableGotHit()
+    {
+        m_BTOwner.SetExposedParameterValue("GotHit", true);
+    }
+
+    public void OnDamage()
+    {
+        EnableGotHit();
+    }
 }
