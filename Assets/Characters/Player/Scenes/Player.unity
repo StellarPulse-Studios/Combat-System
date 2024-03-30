@@ -654,6 +654,12 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &713815167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8812737140248757787, guid: f2f2b653c6565e34093b73e15a788824,
+    type: 3}
+  m_PrefabInstance: {fileID: 1200199480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &999002753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4349977229081315009, guid: 063c8715b613b95458dea1003311305b,
@@ -804,6 +810,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3194540905357330287, guid: f2f2b653c6565e34093b73e15a788824,
         type: 3}
+      propertyPath: _serializedExposedParameters.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3194540905357330287, guid: f2f2b653c6565e34093b73e15a788824,
+        type: 3}
       propertyPath: _serializedExposedParameters.Array.data[3]._json
       value: '{"_targetVariableID":"ddd2e1af-becc-455a-88ec-784063d4779d","_value":1,"$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
@@ -813,6 +824,12 @@ PrefabInstance:
       propertyPath: _serializedExposedParameters.Array.data[11]._json
       value: '{"_targetVariableID":"b066110e-1e3e-426f-ae81-baa538a4218c","_value":[1],"$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3194540905357330287, guid: f2f2b653c6565e34093b73e15a788824,
+        type: 3}
+      propertyPath: _serializedExposedParameters.Array.data[14]._json
+      value: '{"_targetVariableID":"5eca5462-f942-4c7d-8721-d952f395f0bd","_value":1,"$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Int32,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
       objectReference: {fileID: 0}
     - target: {fileID: 3194540905357330287, guid: f2f2b653c6565e34093b73e15a788824,
@@ -898,7 +915,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8812737140248757787, guid: f2f2b653c6565e34093b73e15a788824,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1625900475}
   m_SourcePrefab: {fileID: 100100000, guid: f2f2b653c6565e34093b73e15a788824, type: 3}
 --- !u!1 &1616407098
 GameObject:
@@ -937,12 +958,35 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1200199480}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 713815167}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aad115aca74ce3c4891b3f6de0b4aae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1625900475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713815167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ce64b84b517ba44bee115c20f1b6fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map:
+  - AttackID: 2
+    HitID: 5
+  - AttackID: 3
+    HitID: 3
+  - AttackID: 1
+    HitID: 1
+  - AttackID: 4
+    HitID: 1
+  - AttackID: 5
+    HitID: 5
 --- !u!1 &1722140946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 515919627162682095, guid: e5b0cdb184877bc49869840546c47498,
