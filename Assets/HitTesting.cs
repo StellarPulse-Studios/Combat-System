@@ -16,5 +16,8 @@ public class HitTesting : MonoBehaviour, IDamagable
     public void OnDamage()
     {
         GotHit();
+
+        // From Here
+        //Tweener.Move(gameObject, Vector3.zero, Vector3.one, 1.0f);
     }
 }

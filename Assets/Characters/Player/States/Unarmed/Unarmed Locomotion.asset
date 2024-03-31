@@ -29,4 +29,4 @@ MonoBehaviour:
     to: {fileID: 11400000, guid: 63eb6a6b476096d48ab99b7c192b36de, type: 2}
   actions:
   - {fileID: 11400000, guid: 9a9e62fb382b092448924ac24ec2e913, type: 2}
-  defaultRunning: 1
+  defaultRunning: 0

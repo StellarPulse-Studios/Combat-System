@@ -30,9 +30,11 @@ namespace Player
         public CharacterController characterController;
         public ExtendedCharacterController extendedCharacterController;
         public Animator animator;
-        public GameObject sword;
-        public GameObject shield;
-        public GameObject torch;
+        public GameObject swordInHand;
+        public GameObject shieldInHand;
+        public GameObject torchInHand;
+        public GameObject swordInBack;
+        public GameObject shieldInBack;
 
         [Header("Inputs")]
         public Vector2 move;

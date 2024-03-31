@@ -93,21 +93,29 @@ namespace Player
         {
             blackboard.isArmed = false;
             blackboard.animator.SetLayerWeight(1, 0.0f);
-            blackboard.torch.SetActive(false);
+            blackboard.swordInHand.SetActive(false);
+            blackboard.shieldInHand.SetActive(false);
+            blackboard.torchInHand.SetActive(false);
+            blackboard.swordInBack.SetActive(true);
+            blackboard.shieldInBack.SetActive(true);
         }
 
         private void OnTwo(InputValue value)
         {
             blackboard.isArmed = true;
             blackboard.animator.SetLayerWeight(1, 0.0f);
-            blackboard.torch.SetActive(false);
+            blackboard.torchInHand.SetActive(false);
+            blackboard.swordInBack.SetActive(false);
+            blackboard.shieldInBack.SetActive(false);
         }
 
         private void OnThree(InputValue value)
         {
             blackboard.isArmed = false;
             blackboard.animator.SetLayerWeight(1, 1.0f);
-            blackboard.torch.SetActive(true);
+            blackboard.torchInHand.SetActive(true);
+            blackboard.swordInBack.SetActive(true);
+            blackboard.shieldInBack.SetActive(true);
         }
 
         public void RumbleGamepad(float low, float high)

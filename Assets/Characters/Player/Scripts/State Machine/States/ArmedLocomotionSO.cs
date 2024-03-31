@@ -18,9 +18,12 @@ namespace Player
             board.animator.SetBool("IsArmed", true);
             board.animator.SetBool("IsGrounded", true);
 
+            board.lightAttack = false;
+            board.heavyAttack = false;
+
             // Weapons
-            board.sword.SetActive(true);
-            board.shield.SetActive(true);
+            board.swordInHand.SetActive(true);
+            board.shieldInHand.SetActive(true);
         }
 
         public override void OnExit(Blackboard board)

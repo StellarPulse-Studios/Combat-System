@@ -1,0 +1,16 @@
+{
+    "name": "VERS.Editor",
+    "rootNamespace": "VERS.Editor",
+    "references": [
+        "GUID:c4c7e3b6565c1bb408cfc6350fa415f7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

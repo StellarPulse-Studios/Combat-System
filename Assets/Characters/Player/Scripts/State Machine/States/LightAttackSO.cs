@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using VERS;
 
 namespace Player
 {
     [CreateAssetMenu(fileName = "New Light Attack", menuName = "Player/State/Armed/Light Attack")]
     public class LightAttackSO : StateSO
     {
+        [SerializeField] private GameEventSO m_HitEvent;
+
         public override void OnEnter(Blackboard board)
         {
             board.PreviousVelocity = Vector3.zero;

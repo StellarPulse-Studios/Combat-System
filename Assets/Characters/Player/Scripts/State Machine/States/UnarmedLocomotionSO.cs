@@ -19,8 +19,8 @@ namespace Player
             board.animator.SetFloat("MoveSpeed", board.Velocity.magnitude);
 
             // Weapons
-            board.sword.SetActive(false);
-            board.shield.SetActive(false);
+            board.swordInHand.SetActive(false);
+            board.shieldInHand.SetActive(false);
         }
 
         public override void OnExit(Blackboard board)
