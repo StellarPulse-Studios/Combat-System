@@ -11,16 +11,20 @@ public class AttackToHit : MonoBehaviour {
     [System.Serializable]
     public class Pair
     {
-        public int AttackID;
+        public GameObject AttackPoint;
         public int HitID;
     }
 
     public Pair[] map;
 
-    public int GetValue(int attackID) {
-        for (int i = 0; i < map.Length; i++)
+    public int GetValue(GameObject hit) {
+        
+        for(int i = 0; i < map.Length; i++)
         {
-            if (map[i].AttackID == attackID) return map[i].HitID;
+            if (hit.Equals(map[i].AttackPoint))
+            {
+                return map[i].HitID;
+            }
         }
         return 0;
     }
