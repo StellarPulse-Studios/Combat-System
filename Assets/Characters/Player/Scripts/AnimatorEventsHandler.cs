@@ -18,6 +18,7 @@ namespace Player
         private HashSet<Collider> m_ColliderSet;
         private bool m_IsBoxCasting;
         private bool m_CanMoveTowardTarget;
+        private Vector3 m_GizmosHitPoint;
 
         private void Start()
         {
@@ -106,7 +107,8 @@ namespace Player
 
                 m_ColliderSet.Add(collider);
 
-                m_HitPoint.Value = center;
+                m_HitPoint.Value = collider.ClosestPoint(center);
+                m_GizmosHitPoint = m_HitPoint.Value;
 
                 if (m_HitEvent)
                     m_HitEvent.Raise();
@@ -125,6 +127,9 @@ namespace Player
             Gizmos.matrix = m_BoxCollider.transform.localToWorldMatrix;
             Gizmos.DrawCube(m_BoxCollider.center, m_BoxCollider.size);
             Gizmos.matrix = prevMatrix;
+
+            Gizmos.color = Color.blue;
+            Gizmos.DrawSphere(m_GizmosHitPoint, 0.1f);
         }
     }
 }

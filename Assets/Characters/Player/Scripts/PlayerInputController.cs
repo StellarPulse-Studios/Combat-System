@@ -13,11 +13,15 @@ namespace Player
         public bool dodge;
         public bool block;
         public Blackboard blackboard;
+        public bool isCursorVisible;
 
         private void Start()
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            if (isCursorVisible)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
 
         private void OnMove(InputValue value)
@@ -66,8 +70,11 @@ namespace Player
 
         private void OnLightAttack(InputValue value)
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            if (isCursorVisible)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
 
             blackboard.attack = value.isPressed;
             blackboard.lightAttack = value.isPressed;
@@ -75,8 +82,11 @@ namespace Player
 
         private void OnHeavyAttack(InputValue value)
         {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
+            if (isCursorVisible)
+            {
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
 
             blackboard.attack = value.isPressed;
             blackboard.heavyAttack = value.isPressed;
