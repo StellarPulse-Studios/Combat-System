@@ -222,6 +222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
+      propertyPath: _serializedExposedParameters.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
+        type: 3}
       propertyPath: _serializedExposedParameters.Array.data[3]._json
       value: '{"_targetVariableID":"ddd2e1af-becc-455a-88ec-784063d4779d","_value":1,"$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
@@ -247,12 +252,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
+      propertyPath: _serializedExposedParameters.Array.data[14]._json
+      value: '{"_targetVariableID":"8093865c-9ec6-493a-a58b-615b1c83dd0c","_value":1,"$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.GameObject,
+        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
+        type: 3}
       propertyPath: _serializedExposedParameters.Array.data[3]._references.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
       propertyPath: _serializedExposedParameters.Array.data[11]._references.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
+        type: 3}
+      propertyPath: _serializedExposedParameters.Array.data[14]._references.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
@@ -270,6 +286,11 @@ PrefabInstance:
       propertyPath: _serializedExposedParameters.Array.data[11]._references.Array.data[1]
       value: 
       objectReference: {fileID: 1225264755}
+    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
+        type: 3}
+      propertyPath: _serializedExposedParameters.Array.data[14]._references.Array.data[1]
+      value: 
+      objectReference: {fileID: 1045882194}
     - target: {fileID: 8930715233609001870, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
       propertyPath: m_Controller
@@ -283,6 +304,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1045882197}
+    - targetCorrespondingSourceObject: {fileID: 2764007615773190990, guid: 90d40ca6613fc1640970ad714c6ef891,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1045882200}
   m_SourcePrefab: {fileID: 100100000, guid: 90d40ca6613fc1640970ad714c6ef891, type: 3}
 --- !u!1001 &279035964
 PrefabInstance:
@@ -829,6 +854,18 @@ NavMeshAgent:
   m_BaseOffset: -0.09
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1045882200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045882194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1043b9323335ff40bc68063a1758688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1143534642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,6 +1441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Container
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286101095834604334, guid: e5b0cdb184877bc49869840546c47498,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

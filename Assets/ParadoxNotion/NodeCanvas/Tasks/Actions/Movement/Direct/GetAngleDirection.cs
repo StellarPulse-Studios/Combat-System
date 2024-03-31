@@ -12,15 +12,16 @@ namespace NodeCanvas.Tasks.Actions
     public class GetAngleDirection : ActionTask<Transform>
     {
         [RequiredField]
+        public BBParameter<GameObject> enemy;
         public BBParameter<GameObject> target;
         public BBParameter<float> angle;
         public BBParameter<int> direction;
 
         protected override void OnUpdate()
         {
-            Vector3 directionToTarget = target.value.transform.position - agent.position;
+            Vector3 directionToTarget = target.value.transform.position - enemy.value.transform.position;
 
-            float angleToRotate = Vector3.SignedAngle(agent.forward, directionToTarget, Vector3.up);
+            float angleToRotate = Vector3.SignedAngle(enemy.value.transform.forward, directionToTarget, Vector3.up);
 
             angle.value = angleToRotate;
 
