@@ -2,7 +2,7 @@
     "name": "VERS.Editor",
     "rootNamespace": "VERS.Editor",
     "references": [
-        "GUID:c4c7e3b6565c1bb408cfc6350fa415f7"
+        "GUID:bd061faebb93cd44ba3426b4cd4c34bd"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
