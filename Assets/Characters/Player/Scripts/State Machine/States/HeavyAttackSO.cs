@@ -5,6 +5,8 @@ namespace Player
     [CreateAssetMenu(fileName = "New Heavy Attack", menuName = "Player/State/Armed/Heavy Attack")]
     public class HeavyAttackSO : StateSO
     {
+        private GameObject[] m_Enemies;
+
         public override void OnEnter(Blackboard board)
         {
             board.PreviousVelocity = Vector3.zero;
@@ -12,6 +14,35 @@ namespace Player
             board.attack = false;
             board.heavyAttack = false;
             board.animator.SetTrigger("HeavyAttack");
+
+            m_Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            GameObject closestEnemy = null;
+            float minDistanceFromPlayer = float.MaxValue;
+
+            foreach (GameObject enemy in m_Enemies)
+            {
+                float distance = Vector3.Distance(enemy.transform.position, board.playerTransform.position);
+                if (distance < minDistanceFromPlayer)
+                {
+                    minDistanceFromPlayer = distance;
+                    closestEnemy = enemy;
+                }
+            }
+
+            if (closestEnemy != null && minDistanceFromPlayer <= board.enemyMaxRangeThreshold)
+            {
+                board.closestEnemy = closestEnemy.transform;
+
+                Vector3 enemyDir = closestEnemy.transform.position - board.playerTransform.position;
+                enemyDir.y = 0.0f;
+                enemyDir.Normalize();
+                board.playerTransform.rotation = Quaternion.LookRotation(enemyDir);
+            }
+            else
+            {
+                board.closestEnemy = null;
+            }
         }
 
         public override void OnExit(Blackboard board)
@@ -25,6 +56,33 @@ namespace Player
             {
                 board.heavyAttack = false;
                 board.animator.SetTrigger("HeavyAttack");
+
+                GameObject closestEnemy = null;
+                float minDistanceFromPlayer = float.MaxValue;
+
+                foreach (GameObject enemy in m_Enemies)
+                {
+                    float distance = Vector3.Distance(enemy.transform.position, board.playerTransform.position);
+                    if (distance < minDistanceFromPlayer)
+                    {
+                        minDistanceFromPlayer = distance;
+                        closestEnemy = enemy;
+                    }
+                }
+
+                if (closestEnemy != null && minDistanceFromPlayer <= board.enemyMaxRangeThreshold)
+                {
+                    board.closestEnemy = closestEnemy.transform;
+
+                    Vector3 enemyDir = closestEnemy.transform.position - board.playerTransform.position;
+                    enemyDir.y = 0.0f;
+                    enemyDir.Normalize();
+                    board.playerTransform.rotation = Quaternion.LookRotation(enemyDir);
+                }
+                else
+                {
+                    board.closestEnemy = null;
+                }
             }
 
             if (board.isCharged)

@@ -8,6 +8,8 @@ namespace Player
     {
         [SerializeField] private GameEventSO m_HitEvent;
 
+        private GameObject[] m_Enemies;
+
         public override void OnEnter(Blackboard board)
         {
             board.PreviousVelocity = Vector3.zero;
@@ -16,14 +18,15 @@ namespace Player
             board.lightAttack = false;
             board.animator.SetTrigger("LightAttack");
 
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            m_Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
             GameObject closestEnemy = null;
             float minDistanceFromPlayer = float.MaxValue;
 
-            foreach (GameObject enemy in enemies)
+            foreach (GameObject enemy in m_Enemies)
             {
                 float distance = Vector3.Distance(enemy.transform.position, board.playerTransform.position);
-                if (distance < minDistanceFromPlayer )
+                if (distance < minDistanceFromPlayer)
                 {
                     minDistanceFromPlayer = distance;
                     closestEnemy = enemy;
@@ -54,6 +57,33 @@ namespace Player
         {
             if (board.lightAttack)
             {
+                GameObject closestEnemy = null;
+                float minDistanceFromPlayer = float.MaxValue;
+
+                foreach (GameObject enemy in m_Enemies)
+                {
+                    float distance = Vector3.Distance(enemy.transform.position, board.playerTransform.position);
+                    if (distance < minDistanceFromPlayer)
+                    {
+                        minDistanceFromPlayer = distance;
+                        closestEnemy = enemy;
+                    }
+                }
+
+                if (closestEnemy != null && minDistanceFromPlayer <= board.enemyMaxRangeThreshold)
+                {
+                    board.closestEnemy = closestEnemy.transform;
+
+                    Vector3 enemyDir = closestEnemy.transform.position - board.playerTransform.position;
+                    enemyDir.y = 0.0f;
+                    enemyDir.Normalize();
+                    board.playerTransform.rotation = Quaternion.LookRotation(enemyDir);
+                }
+                else
+                {
+                    board.closestEnemy = null;
+                }
+
                 board.lightAttack = false;
                 board.animator.SetTrigger("LightAttack");
             }
