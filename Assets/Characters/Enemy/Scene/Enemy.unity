@@ -142,11 +142,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orco
       objectReference: {fileID: 0}
-    - target: {fileID: 1373963478165614180, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3966838265553364813, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -197,34 +192,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4041259958397942138, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: _serializedBlackboard
-      value: '{"_variables":{"IsStanding":{"_value":true,"_name":"IsStanding","_id":"92d12d14-b1e8-4546-8974-ba06c0f5ebc4","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Armed":{"_name":"Armed","_id":"d9df66d1-dc03-44b1-ac39-31d8ef1dd094","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4041259958397942138, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: _serializedVariables.Array.data[0]._json
-      value: '{"_value":true,"_name":"IsStanding","_id":"92d12d14-b1e8-4546-8974-ba06c0f5ebc4","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4237899301561158406, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4237899301561158406, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: m_BaseOffset
-      value: -0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: _serializedExposedParameters.Array.size
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
       propertyPath: _serializedExposedParameters.Array.data[3]._json
@@ -233,28 +200,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
-      propertyPath: _serializedExposedParameters.Array.data[9]._json
-      value: '{"_targetVariableID":"43029fcc-21c1-4616-b12c-9cfa111e01d4","_value":1.73498,"$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
       propertyPath: _serializedExposedParameters.Array.data[11]._json
       value: '{"_targetVariableID":"b066110e-1e3e-426f-ae81-baa538a4218c","_value":[1],"$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Collections.Generic.List`1[[UnityEngine.GameObject,
         UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: _serializedExposedParameters.Array.data[12]._json
-      value: '{"_targetVariableID":"f506957a-b2fd-4074-9cfb-72a14f63dea7","_value":4.335,"$type":"NodeCanvas.Framework.ExposedParameter`1[[System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: _serializedExposedParameters.Array.data[14]._json
-      value: '{"_targetVariableID":"8093865c-9ec6-493a-a58b-615b1c83dd0c","_value":1,"$type":"NodeCanvas.Framework.ExposedParameter`1[[UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
@@ -268,46 +217,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
-      propertyPath: _serializedExposedParameters.Array.data[14]._references.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
       propertyPath: _serializedExposedParameters.Array.data[3]._references.Array.data[1]
       value: 
       objectReference: {fileID: 28927487}
     - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
         type: 3}
-      propertyPath: _serializedExposedParameters.Array.data[8]._references.Array.data[1]
-      value: 
-      objectReference: {fileID: 1045882197}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
       propertyPath: _serializedExposedParameters.Array.data[11]._references.Array.data[1]
       value: 
       objectReference: {fileID: 1225264755}
-    - target: {fileID: 4642239878944804252, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: _serializedExposedParameters.Array.data[14]._references.Array.data[1]
-      value: 
-      objectReference: {fileID: 1045882194}
-    - target: {fileID: 8930715233609001870, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: b29ff51b69729b84593bb455aa2b3884, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2764007615773190990, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1045882197}
-    - targetCorrespondingSourceObject: {fileID: 2764007615773190990, guid: 90d40ca6613fc1640970ad714c6ef891,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1045882200}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d40ca6613fc1640970ad714c6ef891, type: 3}
 --- !u!1001 &279035964
 PrefabInstance:
@@ -826,46 +747,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1045882194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2764007615773190990, guid: 90d40ca6613fc1640970ad714c6ef891,
-    type: 3}
-  m_PrefabInstance: {fileID: 214503455}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &1045882197
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045882194}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: -0.09
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1045882200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045882194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1043b9323335ff40bc68063a1758688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1143534642
 GameObject:
   m_ObjectHideFlags: 0
