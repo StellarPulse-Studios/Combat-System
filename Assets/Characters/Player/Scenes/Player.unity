@@ -955,15 +955,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map:
-  - AttackID: 2
+  - AttackPoint: {fileID: 0}
     HitID: 5
-  - AttackID: 3
+  - AttackPoint: {fileID: 0}
     HitID: 3
-  - AttackID: 1
+  - AttackPoint: {fileID: 0}
     HitID: 1
-  - AttackID: 4
+  - AttackPoint: {fileID: 0}
     HitID: 1
-  - AttackID: 5
+  - AttackPoint: {fileID: 0}
     HitID: 5
 --- !u!1 &1971684393
 GameObject:

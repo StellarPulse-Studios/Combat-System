@@ -27,6 +27,13 @@ namespace Player
         private void OnMove(InputValue value)
         {
             move = value.Get<Vector2>();
+
+            if (blackboard.isSliding)
+            {
+                blackboard.move = Vector2.zero;
+                return;
+            }
+
             blackboard.move = move;
         }
 
@@ -45,13 +52,17 @@ namespace Player
         private void OnJump(InputValue value)
         {
             jump = value.isPressed;
-            blackboard.jump = jump;
+
+            if (!blackboard.isSliding)
+                blackboard.jump = jump;
         }
 
         private void OnCrouch(InputValue value)
         {
-            blackboard.isCrouched = !blackboard.isCrouched;
             crouch = blackboard.isCrouched;
+
+            if (!blackboard.isSliding)
+                blackboard.isCrouched = !blackboard.isCrouched;
         }
 
         private void OnDodge(InputValue value)

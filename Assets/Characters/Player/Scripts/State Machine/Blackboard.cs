@@ -18,6 +18,7 @@ namespace Player
         public float crouchWalkSpeed = 2.047f;
         public float enemyMinRangeThreshold = 1.0f;
         public float enemyMaxRangeThreshold = 3.0f;
+        public float slideSpeed = 2.0f;
 
         [Header("Ground Check")]
         public float groundCheckRadiusOffset = 0.01f;
@@ -60,6 +61,8 @@ namespace Player
         public bool isCharged;
         public bool hasStartedCharging;
         public Transform closestEnemy;
+        public bool isSliding;
+        public Vector3 slideNormal;
 
         [Header("Debug Variables")]
         public float CurrentSpeed;

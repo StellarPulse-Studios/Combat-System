@@ -12,13 +12,16 @@ namespace Player
         public Blackboard m_Blackboard;
         public LayerMask m_HitBoxLayer;
         public float m_MoveSpeed = 2.0f;
+        public AnimationCurve m_MoveSpeedCurve;
         public Vector3Reference m_HitPoint;
         public GameEventSO m_HitEvent;
+        public IntReference m_AttackID;
 
         private HashSet<Collider> m_ColliderSet;
         private bool m_IsBoxCasting;
         private bool m_CanMoveTowardTarget;
         private Vector3 m_GizmosHitPoint;
+        private Vector3 m_PreviousHitBoxPosition;
 
         private void Start()
         {
@@ -30,6 +33,7 @@ namespace Player
         {
             m_ColliderSet.Clear();
             m_IsBoxCasting = true;
+            m_PreviousHitBoxPosition = m_BoxCollider.transform.TransformPoint(m_BoxCollider.center); ;
         }
 
         public void DisableHitBox()
@@ -62,8 +66,11 @@ namespace Player
             }
         }
 
+        private float m_MoveSpeedTime;
+
         public void EnableMoving()
         {
+            m_MoveSpeedTime = 0.0f;
             m_CanMoveTowardTarget = true;
             //UnityEditor.EditorApplication.isPaused = true;
         }
@@ -78,7 +85,10 @@ namespace Player
             if (m_Blackboard.closestEnemy && Vector3.Distance(m_Blackboard.playerTransform.position, m_Blackboard.closestEnemy.position) <= m_Blackboard.enemyMinRangeThreshold)
                 return;
 
-            Vector3 motion = m_Blackboard.extendedCharacterController.GetStepDownMotion(Time.deltaTime * m_MoveSpeed * m_Blackboard.transform.forward);
+            float moveSpeed = m_MoveSpeed * m_MoveSpeedCurve.Evaluate(m_MoveSpeedTime * 10.0f);
+            m_MoveSpeedTime += Time.deltaTime;
+
+            Vector3 motion = m_Blackboard.extendedCharacterController.GetStepDownMotion(Time.deltaTime * moveSpeed * m_Blackboard.transform.forward);
             m_Blackboard.characterController.Move(motion);
         }
 
@@ -108,6 +118,20 @@ namespace Player
                 m_ColliderSet.Add(collider);
 
                 m_HitPoint.Value = collider.ClosestPoint(center);
+
+                Vector3 boxCastOffset = center - m_PreviousHitBoxPosition;
+                Vector3 boxCastDirection = boxCastOffset.normalized;
+                if (Physics.BoxCast(m_PreviousHitBoxPosition, m_BoxCollider.size * 0.5f, boxCastDirection, out RaycastHit hitInfo, m_BoxCollider.transform.rotation, boxCastOffset.magnitude, m_HitBoxLayer))
+                {
+                    m_HitPoint.Value = hitInfo.point;
+                    //UnityEditor.EditorApplication.isPaused = true;
+                }
+
+                if (m_AttackID.Value == 2)
+                {
+                    m_HitPoint.Value = collider.ClosestPoint(m_Blackboard.playerTransform.position + Vector3.up);
+                }
+
                 m_GizmosHitPoint = m_HitPoint.Value;
 
                 if (m_HitEvent)
@@ -118,6 +142,8 @@ namespace Player
                     damagable.OnDamage();
                 }
             }
+
+            m_PreviousHitBoxPosition = center;
         }
 
         private void OnDrawGizmos()

@@ -47,6 +47,31 @@ namespace Player
             return motion;
         }
 
+        public Vector3 GetSlopeMotion(Vector3 motion)
+        {
+            Vector3 currPos = m_Transform.position;
+            Vector3 nextPos = currPos + motion;
+
+            const float rayOriginYOffset = 1.0f;
+            Vector3 rayOrigin = new Vector3(nextPos.x, currPos.y + rayOriginYOffset, nextPos.z);
+
+            Ray ray = new Ray(rayOrigin, Vector3.down);
+            float maxRayLength = rayOriginYOffset + stepDownOffset;
+
+            if (Physics.Raycast(ray, out RaycastHit hit, maxRayLength))
+            {
+                float angle = Vector3.Angle(hit.normal, Vector3.up);
+                if (angle >= m_CharacterController.slopeLimit)
+                {
+                    Vector3 projectedMotion = Vector3.ProjectOnPlane(motion, hit.normal);
+                    if (projectedMotion.y > 0.0f)
+                        motion = Vector3.zero;
+                }
+            }
+
+            return motion;
+        }
+
         public CollisionFlags Move(Vector3 motion)
         {
             return m_CharacterController.Move(motion);

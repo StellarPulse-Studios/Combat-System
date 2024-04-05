@@ -541,7 +541,7 @@ MonoBehaviour:
   dodge: 0
   block: 0
   blackboard: {fileID: 1292999377723707180}
-  isCursorVisible: 0
+  isCursorVisible: 1
 --- !u!1 &9008692769260456964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,6 +1640,7 @@ MonoBehaviour:
   crouchWalkSpeed: 2.047
   enemyMinRangeThreshold: 1.5
   enemyMaxRangeThreshold: 5
+  slideSpeed: 5
   groundCheckRadiusOffset: 0.01
   groundCheckYOffset: 0
   groundLayer:
@@ -1676,6 +1677,8 @@ MonoBehaviour:
   isCharged: 0
   hasStartedCharging: 0
   closestEnemy: {fileID: 0}
+  isSliding: 0
+  slideNormal: {x: 0, y: 0, z: 0}
   CurrentSpeed: 0
   Velocity: {x: 0, y: 0, z: 0}
   PreviousVelocity: {x: 0, y: 0, z: 0}
@@ -1698,12 +1701,40 @@ MonoBehaviour:
   m_HitBoxLayer:
     serializedVersion: 2
     m_Bits: 64
-  m_MoveSpeed: 5
+  m_MoveSpeed: 10
+  m_MoveSpeedCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   m_HitPoint:
     m_UseConstant: 0
     m_ConstantValue: {x: 0, y: 0, z: 0}
     m_Variable: {fileID: 11400000, guid: 0fbcc5339c2f5c844a3c55a27b082d3c, type: 2}
   m_HitEvent: {fileID: 11400000, guid: fdf95cd3d6593264cb623b66d5c9ae5f, type: 2}
+  m_AttackID:
+    m_UseConstant: 0
+    m_ConstantValue: 0
+    m_Variable: {fileID: 11400000, guid: 461bd45cb7c6dec4aa7ce30fa90e92b0, type: 2}
 --- !u!4 &2018836385077712871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 366175167995203695, guid: c2093ba87b0ce1e4bae6f83a272df4be,

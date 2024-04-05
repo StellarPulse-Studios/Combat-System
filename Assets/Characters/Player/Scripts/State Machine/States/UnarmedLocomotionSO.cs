@@ -54,16 +54,27 @@ namespace Player
             currentSpeed = Accelerate(currentSpeed, targetSpeed, board);
 
             UpdateRotation(moveDir, board);
+            UpdateSliding(board);
 
             moveDir = Quaternion.Euler(0.0f, board.playerTransform.eulerAngles.y, 0.0f) * Vector3.forward;
 
             board.Velocity = currentSpeed * moveDir;
 
             Vector3 stepDownMotion = board.extendedCharacterController.GetStepDownMotion(board.Velocity * Time.deltaTime);
+            Vector3 slopeMotion = board.extendedCharacterController.GetSlopeMotion(stepDownMotion);
 
-            board.characterController.Move(stepDownMotion);
+            //board.characterController.Move(stepDownMotion);
+            board.characterController.Move(slopeMotion);
 
             board.animator.SetFloat("MoveSpeed", currentSpeed);
+        }
+
+        public override void DrawGizmos(Blackboard board)
+        {
+            base.DrawGizmos(board);
+
+            Gizmos.color = Color.magenta;
+            Gizmos.DrawRay(board.playerTransform.position, board.Velocity);
         }
 
         private float GetTargetSpeed(Blackboard board, float inputMagnitude)
@@ -107,6 +118,19 @@ namespace Player
             float targetYRot = Mathf.Atan2(moveDir.x, moveDir.z) * Mathf.Rad2Deg + board.cameraTransform.eulerAngles.y;
             Quaternion targetRot = Quaternion.Euler(0.0f, targetYRot, 0.0f);
             board.playerTransform.rotation = Quaternion.RotateTowards(board.playerTransform.rotation, targetRot, board.angularSpeed * Time.deltaTime);
+        }
+
+        private void UpdateSliding(Blackboard board)
+        {
+            if (Physics.Raycast(board.playerTransform.position + Vector3.up, Vector3.down, out RaycastHit hit, 1.0f))
+            {
+                float angle = Vector3.Angle(hit.normal, Vector3.up);
+                if (angle >= board.characterController.slopeLimit)
+                {
+                    board.isSliding = true;
+
+                }
+            }
         }
     }
 }
