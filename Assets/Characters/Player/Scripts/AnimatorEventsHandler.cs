@@ -58,12 +58,9 @@ namespace Player
             if (m_Blackboard.isCharging)
             {
                 m_Blackboard.isCharged = true;
-                m_Blackboard.animator.SetFloat("ChargeMultiplier", 0.0f);
             }
-            else
-            {
-                m_Blackboard.animator.SetFloat("ChargeMultiplier", 1.0f);
-            }
+
+            m_Blackboard.animator.SetFloat("ChargeMultiplier", 1.0f);
         }
 
         private float m_MoveSpeedTime;
