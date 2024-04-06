@@ -45,7 +45,7 @@ public class test : MonoBehaviour, IDamagable
 
     public void OnDestroy()
     {
-        EnableGotHit();
+        // EnableGotHit();
     }
 
     public void OnDamage()
