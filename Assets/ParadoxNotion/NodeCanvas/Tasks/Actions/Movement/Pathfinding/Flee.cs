@@ -34,6 +34,7 @@ namespace NodeCanvas.Tasks.Actions
         }
 
         protected override void OnUpdate() {
+
             if ( target.value == null ) { EndAction(false); return; }
             var targetPos = target.value.transform.position;
             if ( ( agent.transform.position - targetPos ).magnitude >= fledDistance.value ) {
