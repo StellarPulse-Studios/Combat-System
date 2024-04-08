@@ -1,4 +1,5 @@
 using UnityEngine;
+using Cinemachine;
 
 namespace Player
 {
@@ -36,6 +37,10 @@ namespace Player
         public GameObject torchInHand;
         public GameObject swordInBack;
         public GameObject shieldInBack;
+
+        [Header("Cinemachine")]
+        public CinemachineVirtualCamera walkCamera;
+        public CinemachineVirtualCamera runCamera;
 
         [Header("Inputs")]
         public Vector2 move;

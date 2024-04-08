@@ -47,6 +47,17 @@ namespace Player
         {
             sprint = value.isPressed;
             blackboard.sprint = sprint;
+
+            if (sprint)
+            {
+                blackboard.runCamera.enabled = true;
+                blackboard.walkCamera.enabled = false;
+            }
+            else
+            {
+                blackboard.walkCamera.enabled = true;
+                blackboard.runCamera.enabled = false;
+            }
         }
 
         private void OnJump(InputValue value)
