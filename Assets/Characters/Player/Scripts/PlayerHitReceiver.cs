@@ -16,7 +16,7 @@ namespace Player
             int randomHitID = Random.Range(1, 5);
             m_Blackboard.animator.SetInteger("HitID", randomHitID);
             m_Blackboard.animator.SetTrigger("Hit");
-            print(randomHitID);
+            //print(randomHitID);
         }
     }
 }
