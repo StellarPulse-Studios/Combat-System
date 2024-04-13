@@ -136,7 +136,7 @@ namespace Player
 
                 if (collider.TryGetComponent(out IDamagable damagable))
                 {
-                    damagable.OnDamage();
+                    damagable.OnDamage(10.0f);
                 }
             }
 

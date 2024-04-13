@@ -6,6 +6,6 @@ namespace Player
 {
     public interface IDamagable
     {
-        void OnDamage();
+        void OnDamage(float damage);
     }
 }

@@ -11,7 +11,7 @@ namespace Player
         [SerializeField] private Vector3Reference m_HitPoint;
         [SerializeField] private Blackboard m_Blackboard;
 
-        public void OnDamage()
+        public void OnDamage(float damage)
         {
             int randomHitID = Random.Range(1, 5);
             m_Blackboard.animator.SetInteger("HitID", randomHitID);

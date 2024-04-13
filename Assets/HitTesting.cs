@@ -13,7 +13,7 @@ public class HitTesting : MonoBehaviour, IDamagable
         m_Animator.SetInteger("HitID", Random.Range(1, 6));
     }
 
-    public void OnDamage()
+    public void OnDamage(float damage)
     {
         GotHit();
 

@@ -48,7 +48,7 @@ public class test : MonoBehaviour, IDamagable
         // EnableGotHit();
     }
 
-    public void OnDamage()
+    public void OnDamage(float damage)
     {
         EnableGotHit();
     }
