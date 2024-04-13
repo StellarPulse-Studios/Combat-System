@@ -8,6 +8,7 @@ using JetBrains.Annotations;
 using VERS;
 using System.Runtime.CompilerServices;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.Events;
 
 public class test : MonoBehaviour, IDamagable
 {
@@ -15,6 +16,7 @@ public class test : MonoBehaviour, IDamagable
     public GameObject weapon;
     public BehaviourTreeOwner m_BTOwner;
     public List<GameObject> contactPoint;
+    public UnityEvent<float> onGotHit;
 
     void Equip()
     {
@@ -50,6 +52,7 @@ public class test : MonoBehaviour, IDamagable
 
     public void OnDamage(float damage)
     {
+        onGotHit?.Invoke(damage);
         EnableGotHit();
     }
 }
