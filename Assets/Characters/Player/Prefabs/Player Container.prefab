@@ -1718,10 +1718,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7158248122277211821}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c2093ba87b0ce1e4bae6f83a272df4be,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2248907283816103461}
   m_SourcePrefab: {fileID: 100100000, guid: c2093ba87b0ce1e4bae6f83a272df4be, type: 3}
 --- !u!4 &46476720449484864 stripped
 Transform:
@@ -1928,34 +1924,9 @@ MonoBehaviour:
     m_ConstantValue: {x: 0, y: 0, z: 0}
     m_Variable: {fileID: 11400000, guid: 612b643950846c44ead3ab2dc214f31d, type: 2}
   m_Blackboard: {fileID: 1292999377723707180}
---- !u!114 &2248907283816103461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1572278877576870617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ed6a65810a56b5418572f716b23101d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 43d51549d88feb344953bc1389cb29c5, type: 2}
-  Response:
+  m_OnDamageReceived:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7158248122277211821}
-        m_TargetAssemblyTypeName: Player.PlayerHitReceiver, Player
-        m_MethodName: OnDamage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &2018836385077712871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 366175167995203695, guid: c2093ba87b0ce1e4bae6f83a272df4be,

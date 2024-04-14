@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using VERS;
 
 namespace Player
@@ -10,13 +11,15 @@ namespace Player
 
         [SerializeField] private Vector3Reference m_HitPoint;
         [SerializeField] private Blackboard m_Blackboard;
+        [SerializeField] private UnityEvent<float> m_OnDamageReceived;
 
         public void OnDamage(float damage)
         {
             int randomHitID = Random.Range(1, 5);
             m_Blackboard.animator.SetInteger("HitID", randomHitID);
             m_Blackboard.animator.SetTrigger("Hit");
-            //print(randomHitID);
+            
+            m_OnDamageReceived?.Invoke(damage);
         }
     }
 }
