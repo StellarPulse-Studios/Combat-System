@@ -112,7 +112,7 @@ namespace Player
 
             blackboard.attack = value.isPressed;
             blackboard.heavyAttack = value.isPressed;
-            blackboard.isCharging = value.isPressed;
+            //blackboard.isCharging = value.isPressed;
         }
 
         private void OnBlock(InputValue value)
