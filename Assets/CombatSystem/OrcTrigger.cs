@@ -47,11 +47,10 @@ public class OrcTrigger : MonoBehaviour
         {
             int randomNumber = Random.Range(0, list.Count);
             attackTokenReference.Value -= 1;
-            // Debug.Log(attackTokenReference.Value+ " : " + randomNumber);
             CallTrigger(list[randomNumber]);
             elaspedTime = 0f;
         }
-        if(restTokenReference.Value == noOfAttackToken)
+        if(restTokenReference.Value >= noOfAttackToken)
         {
             CallRest();
         }
@@ -61,7 +60,7 @@ public class OrcTrigger : MonoBehaviour
     {
         if(elaspedTime >= coolDownTime)
         {
-            attackTokenReference.Value = restTokenReference.Value;
+            attackTokenReference.Value = noOfAttackToken;
             restTokenReference.Value = 0;
             return;
         }
