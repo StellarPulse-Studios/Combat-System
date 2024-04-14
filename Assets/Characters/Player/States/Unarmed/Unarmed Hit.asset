@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 597625e227e7fbe4eab22c3fe8b607c6, type: 3}
-  m_Name: Token Returner Event
+  m_Script: {fileID: 11500000, guid: b02f83538531f514982fd1d5f44866d3, type: 3}
+  m_Name: Unarmed Hit
   m_EditorClassIdentifier: 
+  transitions:
+  - condition: {fileID: 11400000, guid: 0d196bbb467242043b9955be9400396c, type: 2}
+    to: {fileID: 11400000, guid: 1ffd7585d3729ee45a1ad683a448a94d, type: 2}
+  actions: []

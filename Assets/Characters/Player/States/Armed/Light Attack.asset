@@ -15,4 +15,7 @@ MonoBehaviour:
   transitions:
   - condition: {fileID: 11400000, guid: 0d196bbb467242043b9955be9400396c, type: 2}
     to: {fileID: 11400000, guid: 63eb6a6b476096d48ab99b7c192b36de, type: 2}
+  - condition: {fileID: 11400000, guid: eda3069c36ada9a4bbaa29a3fac9d0bd, type: 2}
+    to: {fileID: 11400000, guid: eac95ba4fa3a7bc44a1f258780810297, type: 2}
   actions: []
+  m_HitEvent: {fileID: 0}

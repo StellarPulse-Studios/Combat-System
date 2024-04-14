@@ -68,6 +68,7 @@ namespace Player
         public Transform closestEnemy;
         public bool isSliding;
         public Vector3 slideNormal;
+        public bool gotHit;
 
         [Header("Debug Variables")]
         public float CurrentSpeed;

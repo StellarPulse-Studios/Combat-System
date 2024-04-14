@@ -15,10 +15,8 @@ namespace Player
 
         public void OnDamage(float damage)
         {
-            int randomHitID = Random.Range(1, 5);
-            m_Blackboard.animator.SetInteger("HitID", randomHitID);
-            m_Blackboard.animator.SetTrigger("Hit");
-            
+            m_Blackboard.gotHit = true;
+
             m_OnDamageReceived?.Invoke(damage);
         }
     }
