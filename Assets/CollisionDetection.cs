@@ -64,7 +64,7 @@ public class CollisionDetection : MonoBehaviour
 
             if (collider.TryGetComponent(out IDamagable damagable))
             {
-                Debug.Log("damage");
+                // Debug.Log("damage");
                 damagable.OnDamage(10.0f);
             }
 

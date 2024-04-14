@@ -47,7 +47,7 @@ public class OrcTrigger : MonoBehaviour
         {
             int randomNumber = Random.Range(0, list.Count);
             attackTokenReference.Value -= 1;
-            Debug.Log(attackTokenReference.Value+ " : " + randomNumber);
+            // Debug.Log(attackTokenReference.Value+ " : " + randomNumber);
             CallTrigger(list[randomNumber]);
             elaspedTime = 0f;
         }
