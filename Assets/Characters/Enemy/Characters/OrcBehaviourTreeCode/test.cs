@@ -55,4 +55,8 @@ public class test : MonoBehaviour, IDamagable
         onGotHit?.Invoke(damage);
         EnableGotHit();
     }
+    public void OnDeath()
+    {
+        m_BTOwner.SetExposedParameterValue("AmIDead", true);
+    }
 }
