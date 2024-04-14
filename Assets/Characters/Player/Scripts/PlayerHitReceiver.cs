@@ -19,5 +19,10 @@ namespace Player
 
             m_OnDamageReceived?.Invoke(damage);
         }
+
+        public void Dead()
+        {
+            m_Blackboard.isDead = true;
+        }
     }
 }

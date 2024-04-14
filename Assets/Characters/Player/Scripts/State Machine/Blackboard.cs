@@ -41,6 +41,7 @@ namespace Player
         [Header("Cinemachine")]
         public CinemachineVirtualCamera walkCamera;
         public CinemachineVirtualCamera runCamera;
+        public CinemachineVirtualCamera deadCamera;
 
         [Header("Inputs")]
         public Vector2 move;
@@ -69,6 +70,7 @@ namespace Player
         public bool isSliding;
         public Vector3 slideNormal;
         public bool gotHit;
+        public bool isDead;
 
         [Header("Debug Variables")]
         public float CurrentSpeed;
