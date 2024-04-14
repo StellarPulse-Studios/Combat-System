@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using VERS;
 
 namespace Player
@@ -19,6 +20,13 @@ namespace Player
             board.animator.SetTrigger("LightAttack");
 
             m_Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            List<GameObject> enemies = new List<GameObject>();
+            foreach (var enemy in m_Enemies)
+            {
+                if (enemy.TryGetComponent(out Collider col))
+                    enemies.Add(enemy);
+            }
+            m_Enemies = enemies.ToArray();
 
             GameObject closestEnemy = null;
             float minDistanceFromPlayer = float.MaxValue;

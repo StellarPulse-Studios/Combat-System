@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Player
 {
@@ -16,6 +17,13 @@ namespace Player
             board.animator.SetTrigger("HeavyAttack");
 
             m_Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            List<GameObject> enemies = new List<GameObject>();
+            foreach (var enemy in m_Enemies)
+            {
+                if (enemy.TryGetComponent(out Collider col))
+                    enemies.Add(enemy);
+            }
+            m_Enemies = enemies.ToArray();
 
             GameObject closestEnemy = null;
             float minDistanceFromPlayer = float.MaxValue;
@@ -48,6 +56,10 @@ namespace Player
         public override void OnExit(Blackboard board)
         {
             board.isAnimationStateMachineExited = false;
+            board.hasStartedCharging = false;
+            board.isCharging = false;
+            board.isCharged = false;
+            board.animator.SetFloat("ChargeMultiplier", 1.0f);
         }
 
         public override void OnUpdate(Blackboard board)
@@ -85,14 +97,14 @@ namespace Player
                 }
             }
 
-            if (board.isCharged)
-            {
-                if (!board.isCharging)
-                {
-                    board.isCharged = false;
-                    board.animator.SetFloat("ChargeMultiplier", 1.0f);
-                }
-            }
+            //if (board.isCharged)
+            //{
+            //    if (!board.isCharging)
+            //    {
+            //        board.isCharged = false;
+            //        board.animator.SetFloat("ChargeMultiplier", 1.0f);
+            //    }
+            //}
 
             if (board.hasStartedCharging)
             {
