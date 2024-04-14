@@ -115,6 +115,11 @@ namespace Player
             //blackboard.isCharging = value.isPressed;
         }
 
+        private void OnHeavyAttackCharging(InputValue value)
+        {
+            blackboard.isCharging = value.isPressed;
+        }
+
         private void OnBlock(InputValue value)
         {
             block = value.isPressed;
