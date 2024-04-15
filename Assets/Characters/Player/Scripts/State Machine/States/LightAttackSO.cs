@@ -7,12 +7,14 @@ namespace Player
     [CreateAssetMenu(fileName = "New Light Attack", menuName = "Player/State/Armed/Light Attack")]
     public class LightAttackSO : StateSO
     {
-        [SerializeField] private GameEventSO m_HitEvent;
+        [SerializeField] private IntReference m_AttackType;
 
         private GameObject[] m_Enemies;
 
         public override void OnEnter(Blackboard board)
         {
+            m_AttackType.Value = 1;
+
             board.PreviousVelocity = Vector3.zero;
             board.PreviousSpeed = 0.0f;
             board.attack = false;

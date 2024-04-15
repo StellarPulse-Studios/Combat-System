@@ -21,6 +21,12 @@ namespace Player
             // Weapons
             board.swordInHand.SetActive(false);
             board.shieldInHand.SetActive(false);
+
+            // Virtual Cameras
+            board.walkCamera.enabled = true;
+            board.runCamera.enabled = false;
+            board.deadCamera.enabled = false;
+            board.armedCamera.enabled = false;
         }
 
         public override void OnExit(Blackboard board)

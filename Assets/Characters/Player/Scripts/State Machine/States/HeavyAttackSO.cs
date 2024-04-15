@@ -1,15 +1,20 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using VERS;
 
 namespace Player
 {
     [CreateAssetMenu(fileName = "New Heavy Attack", menuName = "Player/State/Armed/Heavy Attack")]
     public class HeavyAttackSO : StateSO
     {
+        [SerializeField] private IntReference m_AttackType;
+
         private GameObject[] m_Enemies;
 
         public override void OnEnter(Blackboard board)
         {
+            m_AttackType.Value = 2;
+
             board.PreviousVelocity = Vector3.zero;
             board.PreviousSpeed = 0.0f;
             board.attack = false;

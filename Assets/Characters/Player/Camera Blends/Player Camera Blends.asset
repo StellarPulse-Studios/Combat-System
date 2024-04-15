@@ -17,7 +17,7 @@ MonoBehaviour:
     m_To: Unarmed Run VC
     m_Blend:
       m_Style: 1
-      m_Time: 10
+      m_Time: 3
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
@@ -40,6 +40,28 @@ MonoBehaviour:
     m_Blend:
       m_Style: 3
       m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: '**ANY CAMERA**'
+    m_To: Armed VC
+    m_Blend:
+      m_Style: 1
+      m_Time: 0.5
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: '**ANY CAMERA**'
+    m_To: Unarmed Walk VC
+    m_Blend:
+      m_Style: 1
+      m_Time: 0.5
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []

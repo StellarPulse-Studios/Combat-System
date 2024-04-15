@@ -41,7 +41,26 @@ namespace Player
         [Header("Cinemachine")]
         public CinemachineVirtualCamera walkCamera;
         public CinemachineVirtualCamera runCamera;
+        public CinemachineVirtualCamera armedCamera;
         public CinemachineVirtualCamera deadCamera;
+
+        [Header("VFX")]
+        public ParticleSystem lightAttack1SwordSlash;
+        public ParticleSystem lightAttack3SwordSlash;
+        public ParticleSystem lightAttack4SwordSlash;
+        public ParticleSystem lightAttack5SwordSlash;
+        public ParticleSystem heavyAttack1SwordSlash;
+        public ParticleSystem heavyAttack2SwordSlash;
+
+        [Header("SFX")]
+        public AudioSource swordAudioSource;
+        public AudioClip swordLightAttack1Sound;
+        public AudioClip swordLightAttack2Sound;
+        public AudioClip swordLightAttack3Sound;
+        public AudioClip swordLightAttack4Sound;
+        public AudioClip swordLightAttack5Sound;
+        public AudioClip swordHeavyAttack1Sound;
+        public AudioClip swordHeavyAttack2Sound;
 
         [Header("Inputs")]
         public Vector2 move;

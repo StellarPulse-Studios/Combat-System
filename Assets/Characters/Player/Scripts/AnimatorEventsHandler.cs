@@ -16,6 +16,7 @@ namespace Player
         public Vector3Reference m_HitPoint;
         public GameEventSO m_HitEvent;
         public IntReference m_AttackID;
+        public IntReference m_AttackType;
         public BoolReference m_IsPlayerDead;
 
         private HashSet<Collider> m_ColliderSet;
@@ -33,6 +34,16 @@ namespace Player
 
         public void EnableHitBox()
         {
+            switch (m_AttackType.Value)
+            {
+                case 1:
+                    SwordLightAttack();
+                    break;
+                case 2:
+                    SwordHeavyAttack();
+                    break;
+            }
+
             m_ColliderSet.Clear();
             m_IsBoxCasting = true;
             m_PreviousHitBoxPosition = m_BoxCollider.transform.TransformPoint(m_BoxCollider.center); ;
@@ -155,6 +166,51 @@ namespace Player
 
             Gizmos.color = Color.blue;
             Gizmos.DrawSphere(m_GizmosHitPoint, 0.1f);
+        }
+
+        private void SwordLightAttack()
+        {
+            switch (m_AttackID.Value)
+            {
+                case 1:
+                    m_Blackboard.lightAttack1SwordSlash.Play();
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordLightAttack1Sound;
+                    break;
+                case 2:
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordLightAttack2Sound;
+                    break;
+                case 3:
+                    m_Blackboard.lightAttack3SwordSlash.Play();
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordLightAttack3Sound;
+                    break;
+                case 4:
+                    m_Blackboard.lightAttack4SwordSlash.Play();
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordLightAttack4Sound;
+                    break;
+                case 5:
+                    m_Blackboard.lightAttack5SwordSlash.Play();
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordLightAttack5Sound;
+                    break;
+            }
+
+            m_Blackboard.swordAudioSource.Play();
+        }
+
+        private void SwordHeavyAttack()
+        {
+            switch (m_AttackID.Value)
+            {
+                case 1:
+                    m_Blackboard.heavyAttack1SwordSlash.Play();
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordHeavyAttack1Sound;
+                    break;
+                case 2:
+                    m_Blackboard.heavyAttack2SwordSlash.Play();
+                    m_Blackboard.swordAudioSource.clip = m_Blackboard.swordHeavyAttack2Sound;
+                    break;
+            }
+
+            m_Blackboard.swordAudioSource.Play();
         }
     }
 }

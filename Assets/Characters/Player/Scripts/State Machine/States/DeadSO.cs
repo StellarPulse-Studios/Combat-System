@@ -20,6 +20,7 @@ namespace Player
             board.walkCamera.enabled = false;
             board.runCamera.enabled = false;
             board.deadCamera.enabled = true;
+            board.armedCamera.enabled = false;
 
             if (deadEvent)
                 deadEvent.Raise();
