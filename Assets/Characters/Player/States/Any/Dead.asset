@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitions: []
   actions: []
+  isPlayerDead:
+    m_UseConstant: 0
+    m_ConstantValue: 0
+    m_Variable: {fileID: 11400000, guid: 1019455f753c0684f9e9d7f48078e974, type: 2}
+  deadEvent: {fileID: 11400000, guid: 02f29ece0ab8ef54fb7a28cc1fe9ec84, type: 2}

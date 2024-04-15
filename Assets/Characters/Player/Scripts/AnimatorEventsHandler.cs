@@ -16,6 +16,7 @@ namespace Player
         public Vector3Reference m_HitPoint;
         public GameEventSO m_HitEvent;
         public IntReference m_AttackID;
+        public BoolReference m_IsPlayerDead;
 
         private HashSet<Collider> m_ColliderSet;
         private bool m_IsBoxCasting;
@@ -27,6 +28,7 @@ namespace Player
         {
             m_ColliderSet = new HashSet<Collider>();
             m_IsBoxCasting = false;
+            m_IsPlayerDead.Value = false;
         }
 
         public void EnableHitBox()
