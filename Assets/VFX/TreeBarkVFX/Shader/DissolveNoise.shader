@@ -1,4 +1,4 @@
-Shader "LightSplash/Particles/DissolveNoise"
+Shader "HammerSplash/Particles/DissolveNoise"
 {
 	Properties
 	{
@@ -96,6 +96,7 @@ Shader "LightSplash/Particles/DissolveNoise"
 					UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 					UNITY_TRANSFER_INSTANCE_ID(v, o);
 					o.ase_texcoord3.xyz = v.ase_texcoord1.xyz;
+					
 					
 					o.ase_texcoord3.w = 0;
 

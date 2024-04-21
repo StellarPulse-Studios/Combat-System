@@ -1,4 +1,4 @@
-Shader "LightSplash/Particles/Blend_CenterGlow"
+Shader "HammerSplash/Particles/Blend_CenterGlow"
 {
 	Properties
 	{

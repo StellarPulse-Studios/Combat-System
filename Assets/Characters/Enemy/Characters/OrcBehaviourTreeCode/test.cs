@@ -17,6 +17,8 @@ public class test : MonoBehaviour, IDamagable
     public BehaviourTreeOwner m_BTOwner;
     public List<GameObject> contactPoint;
     public UnityEvent<float> onGotHit;
+    public CollisionDetection collision;
+    public GameObject blood;
 
     void Equip()
     {
@@ -41,6 +43,7 @@ public class test : MonoBehaviour, IDamagable
             }
         }
         int hitID = GetComponent<AttackToHit>().GetValue(contactPoint[index]);
+        Instantiate(blood, contactPoint[index].transform.position, contactPoint[index].transform.rotation);
         m_BTOwner.SetExposedParameterValue("HitID", hitID);
         m_BTOwner.SetExposedParameterValue("GotHit", true);
     }
@@ -52,6 +55,7 @@ public class test : MonoBehaviour, IDamagable
 
     public void OnDamage(float damage)
     {
+        collision.DisableHitBox();
         onGotHit?.Invoke(damage);
         EnableGotHit();
     }
